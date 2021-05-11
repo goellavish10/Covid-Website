@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Covid-19 Website Design Tutorial</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">  
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header>
+
+    <a href="https://en.wikipedia.org/wiki/COVID-19" target="neio" class="logo">C<span class="fas fa-virus"></span>VID-19</a>
+
+    <div id="menu" class="fas fa-bars"></div>
+
+<!-- MAKE A CLOCK -->
+<a href = "clock (2).html" class="" target="new">
+<div class="wrapper">
+   <div class="display">
+      <div id="time">
+</div>
+</div>
+<span></span>
+    <span></span>
+  </div>
+</a>
+<script>
+    setInterval(()=>{
+      const time = document.querySelector(".display #time");
+      let date = new Date();
+      let hours = date.getHours();
+      let minutes = date.getMinutes();
+      let seconds = date.getSeconds();
+      let day_night = "AM";
+      if(hours > 12){
+        day_night = "PM";
+        hours = hours - 12;
+      }
+      if(seconds < 10){
+        seconds = "0" + seconds;
+      }
+      if(minutes < 10){
+        minutes = "0" + minutes;
+      }
+      if(hours < 10){
+        hours = "0" + hours;
+      }
+      time.textContent = hours + ":" + minutes + ":" + seconds + " "+ day_night;
+    });
+  </script>
+<!-- end of CLOCK -->
+
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+    <div class="content">
+        <h3>Stay Home, Stay Safe!</h3>
+        <p> The pandemic has taken a toll on the lives of people since its very beginning and
+            protecting our loved ones is becoming a crucial matter of concern. These hard times
+             demand more awareness about the spread of the deadly corona virus and effective measures to beat it.</p>
+        <a href="https://www.covid19india.org/" class="btn" target="newwindow1">Status of COVID-19 in India</a>
+        <a href="https://covid19.who.int/" class="btn" target="newwindow2">Status of COVID-19 in the World</a>
+    </div>
+
+    <div class="image">
+        <img src="images/home-img.png" alt="">
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<section class="protect" id="protect">
+
+    <h1 class="heading"><span>Prevention</span> Methods</h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/protect-1.png" alt="">
+            <h3>Wear A Face Mask</h3>
+            <p> Ensure that your mouth and nose are properly covered by a face mask before stepping out of your place, to reduce 
+                the risk of infection.</p>
+            <a href="facemask.html" class="btn">Learn More</a>
+        </div>
+
+        <div class="box">
+            <img src="images/protect-2.png" alt="">
+            <h3>Wash Your Hands</h3>
+            <p>Regularly wash your hands with soap and water for at least 20 seconds or use a hand sanitizer to kill the germs and prevent spread.</p>
+            <a href="hands.html" class="btn">Learn More</a>
+        </div>
+
+        <div class="box">
+            <img src="images/protect-3.png" alt="">
+            <h3>Avoid Close Contact</h3>
+            <p>Stay at least 6 feet away from others and practice social distancing as much as possible as 
+                asymptomatic patients can also act as carriers of the virus.</p>
+            <a href="distance.html" class="btn">Learn More</a>
+        </div>
+
+        <div class="box">
+            <img src="images/immunity.jpg" style="border-radius: 100%;" alt="">
+            <h3>Lifestyle</h3>
+            <p>Adopting a healthy life-style can boost your immunity to a great extent. Building your immunity will ultimately result in greater protection.</p>
+            <a href="immunity.html" class="btn">Learn More</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- symtoms section starts  -->
+
+<section class="symtoms" id="symtoms">
+
+    <div class="content">
+        <h1 class="heading"><span>Symptoms</span></h1>
+        <p>One may experience some of the following symptoms on coming in contact with Covid-19 virus :</p>
+        <ul>
+            <div class="one">
+                <li>Fever</li>
+                <li>Tiredness</li>
+                <li>Dry Cough</li>
+            </div>
+            <div class="two">
+                <li>Sore Throat</li>            
+                <li>Aches and Pains</li>
+                <li>Shortness of Breath</li>
+            </div>
+        </ul>
+        <a href="symp.html" class="btn">Know more</a>
+    </div>
+
+    <div class="image">
+        <img src="images/symptoms-img.png" alt="">
+    </div>
+
+</section>
+
+<!-- symtoms section ends -->
+
+<!-- prevent section starts  -->
+
+<section class="prevent" id="prevent">
+
+    <div class="row">
+
+        <div class="image">
+            <img src="images/dont-img.png" alt="">
+        </div>
+
+        <div class="content">
+            <h1 class="heading">Things <span>to avoid -</span></h1>
+            <p>The following things must be avoided as a precautionary measure: </p>
+            <ul>
+                <li>Do Not Share Eating</li>
+                <li>Do Not Touch Your Face or Nose</li>
+                <li>Do Not Contact Sick People</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="content">
+            <h1 class="heading">Things <span>to do -</span></h1>
+            <p>There are some do's that need to be followed as well:</p>
+            <ul>
+                <li>Wash Your Hands For 20 sec</li>
+                <li>Wear a Mask if Available</li>
+                <li>Seek Medical Care Regularly</li>
+            </ul>
+        </div>
+
+        <div class="image">
+            <img src="images/do-img.png" alt="">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- prevent section ends -->
+
+<!-- spread section starts  -->
+
+<section class="spread" id="spread">
+
+    <h1 class="heading"><span>Spread</span> of COVID-19</h1>
+
+    <div class="image">   <img src="images/map.png" 
+        alt="" style="height: 450px; width: 800 px;"></div>
+
+</section>
+
+<!-- spread section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>About</h3>
+            <p>Amid the worsened situation of COVID-19, this is a small attempt to gather all the necessary
+                information and increase awareness amongst the general public, about the necessary 
+                precautions that must be taken to avoid further spread of the virus.</p>
+        </div>
+
+        <div class="box">
+            <h3>Contact Info</h3>
+            
+            <p> <i class="fas fa-map-marker-alt"></i> NIT Jalandhar </p>
+            <div class="share">
+                <a href="https://www.facebook.com/WHO/" target="nw1" class="fab fa-facebook-f"></a>
+                <a href="https://www.instagram.com/who/?hl=en" target="nw2" class="fab fa-instagram"></a>
+                <a href="https://twitter.com/who?lang=en" target="nw3" class="fab fa-twitter"></a>
+            </div>
+        </div>
+
+    </div>
+
+    <h1 class="credit"> Programmer <a href="index.html">Penguin </a></h1>
+    <h1 class="credit_down">©2020-All Rights Reserved!</h1>
+
+</section>
+
+<!-- footer section ends -->
+
+<!-- scroll top  -->
+
+<a href="#home" class="scroll-top">
+    <img src="images/scroll-img.png" alt="">
+</a>
+
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+
+</body>
+</html>
