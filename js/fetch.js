@@ -1,19 +1,20 @@
 const apiUrl = "https://api.covid19india.org/v4/min/data.min.json";
 const form_el = document.getElementById("myForm");
-const state = document.getElementById("state");
 
-form_el.addEventListener("submit", function (evt) {
-  evt.preventDefault();
-  getData();
-});
+function val() {
+  var d = document.getElementById("selected").value;
 
-async function getData() {
+  getData(d);
+}
+
+async function getData(stateName) {
   try {
+    let state = stateName;
     let dataTable = document.getElementById("data");
+    console.log(state);
     let data = await fetch(apiUrl);
     let response = await data.json();
-    let name = state.value;
-    console.log(name);
+    let name = state;
     console.log(response[name].total);
     dataTable.innerHTML = `
         <td>${response[name].total.confirmed}</td>
